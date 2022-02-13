@@ -7,6 +7,6 @@ Currently This is a pre-release application, so it means it will have some rough
 ## Current Bugs
 These are the bugs we want you to fix
  * The Full-Screen feature is deprecated in Java (MainActivity.kt)
- * This crashes when you rotate.
+ * This crashes when you rotate due to the google CameraX API implementation.
 ## License
 This app is free software: You have the rights to re-distribute it and/or modify it under the terms of GNU General Public License (as published by the Free software foundation; either version 2, or any later version. See LICENSE for more detail.
