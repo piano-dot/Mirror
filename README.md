@@ -12,5 +12,6 @@ Despite it goes stable, it still have some rough edges and feature missing we've
 These are the bugs we want you (developers) to fix:
  * The Full-Screen feature is deprecated in Java (```window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)```)
  * This is locked to landscape orientation due to it will crashes when you rotate in the 1.0.1-alpha release of Mirror, so it will affect some of chromebook users with multi-window mode using this application.
+ * The first-time setup is
 ## License
 This app is free software: You have the rights to re-distribute it and/or modify it under the terms of GNU General Public License (as published by the Free software foundation; either version 2, or any later version. See LICENSE for more detail.
