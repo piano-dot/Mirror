@@ -9,3 +9,5 @@ Or you can use other way to clone such as downloading ZIP file, use with SSH, or
 ## Import to Android Studio
 * Launch Android Studio. 
 * Select File -> Import project, Select to your cloned repository.
+
+Now you can use AVD or connected device to build and run the app
