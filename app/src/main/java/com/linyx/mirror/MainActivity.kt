@@ -23,6 +23,8 @@ typealias LumaListener = (luma: Double) -> Unit
 
 
 class MainActivity : AppCompatActivity() {
+    //This is pre-release version:
+    //This app is licensed at GNU GPL 2.0 or later with NO WARRANTY.
 
     private lateinit var viewBinding: ActivityMainBinding
 
@@ -115,18 +117,19 @@ class MainActivity : AppCompatActivity() {
         cameraExecutor.shutdown()
     }
 
+
+
     companion object {
-        private const val TAG = "CameraXApp"
+        private const val TAG = "Mirror"
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS =
             mutableListOf (
                 Manifest.permission.CAMERA,
-                Manifest.permission.RECORD_AUDIO
             ).apply {
-                if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+                /*if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
                     add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                }
+                }*/
             }.toTypedArray()
     }
 }
