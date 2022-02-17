@@ -1,23 +1,24 @@
 package com.linyx.mirror
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.Manifest
+import android.app.AlertDialog
 import android.content.pm.PackageManager
+import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.video.Recorder
+import androidx.camera.video.Recording
+import androidx.camera.video.VideoCapture
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.camera.core.*
-import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.camera.video.*
-import androidx.camera.video.VideoCapture
 import com.linyx.mirror.databinding.ActivityMainBinding
-import java.util.*
 import java.util.concurrent.ExecutorService
-import android.content.ContentValues
-import android.os.Build
-import android.view.WindowManager
 
 typealias LumaListener = (luma: Double) -> Unit
 
@@ -25,7 +26,22 @@ typealias LumaListener = (luma: Double) -> Unit
 class MainActivity : AppCompatActivity() {
     //This is pre-release version:
     //This app is licensed at GNU GPL 2.0 or later with NO WARRANTY.
-
+    //First Run dialog
+    val frc: String = "Welcome to Mirror, your minimal mirror android program.\nYou can contribute to us or ask any questions in the Linyixuan10/Mirror repo, available on Github.\nThis app is licensed under GNU GPL v2.0 or later. See LICENSE of the app source code to learn more."
+    val frt: String = "Welcome to the Mirror App!"
+    fun checkFirstRun() {
+        val isFirstRun =
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true)
+        if (isFirstRun) {
+            // Place your dialog code here to display the dialog.
+            AlertDialog.Builder(this).setTitle(frt).setMessage(frc)
+                .setNeutralButton("OK", null).show()
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .edit()
+                .putBoolean("isFirstRun", false)
+                .apply()
+        }
+    }
     private lateinit var viewBinding: ActivityMainBinding
 
     private var imageCapture: ImageCapture? = null
@@ -42,7 +58,8 @@ class MainActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-
+        // check if it's running first time, open a dialog if it does.
+        checkFirstRun()
         // Request camera permissions
         if (allPermissionsGranted()) {
             startCamera()

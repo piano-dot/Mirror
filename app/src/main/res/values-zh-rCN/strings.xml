@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">镜子</string>
+    <string name="FirstRunTitle">欢迎来到镜子应用！</string>
+    <string name="FirstRunContent">
+        欢迎来到镜像，你的简洁镜子程序。\n您可以在 Github 上的 Linyixuan10/Mirror 存储库中向我们进行贡献或提出任何问题。\n此应用程序在 GNU GPL v2.0 或更高版本下获得许可。请参阅应用源代码的许可证以了解更多信息。
+    </string>
 </resources>

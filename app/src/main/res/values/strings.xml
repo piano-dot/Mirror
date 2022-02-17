@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Mirror</string>
+    <string name="FirstRunTitle">Welcome to the Mirror App!</string>
+    <string name="FirstRunContent">
+        Welcome to Mirror, your minimal mirror android program.\nYou can contribute to us or ask any questions in the Linyixuan10/Mirror repo, available on Github.\nThis app is licensed under GNU GPL v2.0 or later. See LICENSE of the app source code to learn more.
+    </string>
 </resources>
