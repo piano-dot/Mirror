@@ -7,7 +7,7 @@ Despite it goes stable, it still have some rough edges and feature missing we've
  * free to use/modify, with GNU GPL covered.
 ## System requirements
  * Needs Android 6.0 (Marshmallow) or later to work;
- * currently have not supported for the Android 13 (Tiramisu). We are planning to enable support for Tiramisu in the next alpha release once it goes to beta stage.
+ * currently have not supported for the Android 13 (Tiramisu). We are planning to enable support for Tiramisu in the next alpha release once android release goes to beta stage.
 ## Current Bugs
 These are the bugs we want you (developers) to fix:
  * The Full-Screen feature is deprecated in Java (```window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)```)
