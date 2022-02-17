@@ -7,6 +7,8 @@ Despite it goes stable, it still have some rough edges and feature missing we've
  * free to use/modify, with GNU GPL covered.
 ## System requirements
  * Needs Android 6.0 (Marshmallow) or later to work;
+ * API level 32 or Android 12L (for foldables and large screens) are enabled in the latest source.
+ * the release 1.0 version have not been supported for 12L (API Level 32)
  * currently have not supported for the Android 13 (Tiramisu). We are planning to enable support for Tiramisu in the next alpha release once android release goes to beta stage.
 ## Current Bugs
 These are the bugs we want you (developers) to fix:
