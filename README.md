@@ -16,12 +16,15 @@ These are the bugs we want you (developers) to fix:
  ---
  ## FAQs
  Q: Are android tiramisu (13) supported?
+ 
  A: I haven't tested. It probably supported, it still up to you to report compatability issues to us.
  
  Q: Can I use this app with android version below 6.0?
+ 
  A: Well, you can do that, but CameraX still only supports android 5.0 (Lolipop) or later to work. So if you have a android 5.0 device, you can do that by modifying the build.gradle under /app directory and change ``minSdk`` from 23 to 21.
  
  Q: Can I modify it for my own use cases?
+ 
  A: Sure, you can! GPL only came effective when you release it to the public, so it's fine to modify it yourself and not to release it (that's how google used GPL programs in its search service). 
  ---
 ## License
