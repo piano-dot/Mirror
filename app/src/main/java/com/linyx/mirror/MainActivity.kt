@@ -24,17 +24,16 @@ typealias LumaListener = (luma: Double) -> Unit
 
 
 class MainActivity : AppCompatActivity() {
-    //This is pre-release version:
     //This app is licensed at GNU GPL 2.0 or later with NO WARRANTY.
     //First Run dialog
-    val frc: String = "Welcome to Mirror, your minimal mirror android program.\nYou can contribute to us or ask any questions in the Linyixuan10/Mirror repo, available on Github.\nThis app is licensed under GNU GPL v2.0 or later. See LICENSE of the app source code to learn more."
-    val frt: String = "Welcome to the Mirror App!"
+    val content: String = getString(R.string.FirstRunTitle)
+    val title: String = "Welcome to Mirror, your minimal mirror android program.\\nYou can contribute to us or ask any questions in the Linyixuan10/Mirror repo, available on Github.\\nThis app is licensed under GNU GPL v2.0 or later. See LICENSE of the app source code to learn more.\n"
     fun checkFirstRun() {
         val isFirstRun =
             getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true)
         if (isFirstRun) {
             // Place your dialog code here to display the dialog.
-            AlertDialog.Builder(this).setTitle(frt).setMessage(frc)
+            AlertDialog.Builder(this).setTitle(title).setMessage(content)
                 .setNeutralButton("OK", null).show()
             getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .edit()
