@@ -16,6 +16,14 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "Mirrorapp.apk"
+            }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
