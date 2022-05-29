@@ -24,7 +24,6 @@ typealias LumaListener = (luma: Double) -> Unit
 
 
 class MainActivity : AppCompatActivity() {
-    //This is pre-release version:
     //This app is licensed at GNU GPL 2.0 or later with NO WARRANTY.
     //First Run dialog
     val frc: String = "Welcome to Mirror, your minimal mirror android program.\nYou can contribute to us or ask any questions in the Linyixuan10/Mirror repo, available on Github.\nThis app is licensed under GNU GPL v2.0 or later. See LICENSE of the app source code to learn more."
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         if (isFirstRun) {
             // Place your dialog code here to display the dialog.
             AlertDialog.Builder(this).setTitle(frt).setMessage(frc)
-                .setNeutralButton("OK", null).show()
+                .setNeutralButton("LET'S START", null).show()
             getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .edit()
                 .putBoolean("isFirstRun", false)
