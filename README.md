@@ -12,6 +12,10 @@ Despite it goes stable, it still have some rough edges and feature missing we've
 These are the bugs that you can fix:
 * The Full-Screen feature is deprecated in Java (```window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)```), a replacement required;
 * The first-time setup has no translation with ```strings.xml``` whatsoever, due to it will crash when first startup with a translated.
+## Download the app
+You can now download the app on the amazon appstore! [amazonbadge](https://user-images.githubusercontent.com/63381178/171801953-131fe9a6-6011-4215-9d00-f6e94bfe0a21.png)(https://www.amazon.com/gp/product/B0B124M26K/ref=mas_pm_Mirror)
+</br>
+Or, download it on github releases.
  ---
 ## FAQs
 Q: Are android tiramisu (13) supported?</br>
